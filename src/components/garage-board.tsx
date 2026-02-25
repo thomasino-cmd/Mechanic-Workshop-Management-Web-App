@@ -1,4 +1,6 @@
 'use client';
+
+import { useState } from 'react';
 import { DndContext, DragEndEvent, useDraggable, useDroppable } from '@dnd-kit/core';
 import Link from 'next/link';
 import { appointments, clients, vehicles } from '@/lib/mock-db';
@@ -60,7 +62,7 @@ export function GarageBoard() {
     Pronti: [] as string[]
   };
 
-  const [columns, setColumns] = React.useState<Record<Column, string[]>>(initial);
+  const [columns, setColumns] = useState<Record<Column, string[]>>(initial);
 
   const onDragEnd = (event: DragEndEvent) => {
     const to = event.over?.id as Column | undefined;
