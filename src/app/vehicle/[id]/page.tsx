@@ -43,7 +43,7 @@ export default function VehicleProfilePage() {
             onChange={(e) => setKm(Number(e.target.value))}
             className={`mb-3 mt-1 min-h-16 w-full rounded-xl border-4 px-4 text-4xl font-black ${kmInvalid ? 'border-red-500' : 'border-slate-200'}`}
           />
-          {kmInvalid && <p className="mb-2 font-bold text-red-600">Attenzione: KM inferiore all'ultimo intervento.</p>}
+          {kmInvalid && <p className="mb-2 font-bold text-red-600">Attenzione: KM inferiore all&apos;ultimo intervento.</p>}
 
           <label className="text-sm font-bold">2) Tag intervento</label>
           <div className="my-2"><TagToggleGrid value={selectedTags} onChange={setSelectedTags} /></div>
